@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "start": "bun run ./src/app.js",
-    "lint": "eslint ./src --color"
+    "lint": "eslint ./src --color",
+    "build:linux": "bun build --compile --target=bun-linux-x64 ./src/app.js --outfile ./build/convert-functions-linux",
+    "build:windows": "bun build --compile --target=bun-windows-x64 ./src/app.js --outfile ./build/convert-functions-windows",
+    "build:mac": "bun build --compile --target=bun-darwin-arm64 ./src/app.js --outfile ./build/convert-functions-mac"
   },
   "keywords": [],
   "author": "",
